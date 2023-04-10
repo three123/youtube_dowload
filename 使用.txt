@@ -1,0 +1,45 @@
+批量 下载youtube高清视频(+字幕)和封面
+
+使用方法:
+1、安装最新版 python
+2、将要下载的youtube 视频链接放到 url.txt中
+3、运行 youtube.py
+
+4、打开download 
+里面很多 文件  MP4、jpg封面，原始en字幕，翻译zh字幕，vtt为原始字幕 srt为转换字幕。
+
+
+
+
+
+
+
+
+
+ffmpeg：插件下载目录：
+https://ffmpeg.org/download.html
+
+youtube-dl.exe(yt-dlp) 下载目录：
+https://github.com/yt-dlp/yt-dlp/releases
+
+python 下载目录：
+https://www.python.org/downloads/
+
+
+备注：
+youtube.py是主程序。
+程序自带了 win64的运行环境
+在 mac、linux等环境其实可以用。
+需要下载python、ffmpeg、yt-dlp 插件。
+
+
+常用单独下载命令
+youtube-dl.exe --write-subs --sub-format=srt --sub-langs=zh-Hans,en    --skip-download https://www.youtube.com/watch?v=V_91IvxsqVY
+youtube-dl.exe --write-subs --sub-format=srt --sub-langs=zh-Hans,en  --list-subs   --skip-download https://www.youtube.com/watch?v=V_91IvxsqVY
+
+--all-subs 
+--write-auto-sub
+
+youtube-dl.exe --write-auto-sub --sub-format=srt --sub-langs=zh-Hans,en    --skip-download https://www.youtube.com/watch?v=V_91IvxsqVY
+
+ffmpeg -i *.en.vtt *.en.srt
